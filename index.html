@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Hadi | Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --forest: #0B4F3C;
+            --forest-mid: #176650;
+            --forest-light: #1e8a6a;
+            --cream: #F9F6F0;
+            --warm-white: #FDFBF8;
+            --ink: #1A1A1A;
+            --ink-mid: #3D3D3D;
+            --ink-muted: #7A7A7A;
+            --rule: #E4DDD3;
+            --gold: #C8A96E;
+            --error: #B04040;
+        }
+
+        *, *::before, *::after {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--cream);
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* ── NOISE TEXTURE OVERLAY ── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ── LAYOUT ── */
+        .page-wrap {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── HEADER ── */
+        .site-header {
+            padding: 60px 0 50px;
+            border-bottom: 1px solid var(--rule);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .header-eyebrow {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--forest);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 28px;
+            height: 1px;
+            background: var(--forest);
+        }
+
+        h1.site-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(44px, 7vw, 64px);
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            margin-bottom: 12px;
+        }
+
+        h1.site-title em {
+            font-style: italic;
+            color: var(--forest);
+        }
+
+        .header-sub {
+            font-size: 15px;
+            color: var(--ink-muted);
+            max-width: 540px;
+            line-height: 1.7;
+        }
+
+        .last-updated {
+            display: inline-block;
+            font-size: 12px;
+            color: var(--ink-muted);
+            background: var(--warm-white);
+            border: 1px solid var(--rule);
+            border-radius: 100px;
+            padding: 6px 16px;
+            margin-top: 24px;
+        }
+
+        /* ── SECTION TITLES ── */
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--forest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .section-icon i {
+            color: var(--cream);
+            font-size: 16px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            color: var(--ink);
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--forest);
+            margin: 24px 0 12px;
+        }
+
+        /* ── CONTENT ── */
+        .content-card {
+            background: var(--warm-white);
+            border: 1px solid var(--rule);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .content-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-text {
+            font-size: 15px;
+            color: var(--ink-mid);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .content-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-text strong {
+            color: var(--forest);
+            font-weight: 500;
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin: 16px 0 20px;
+        }
+
+        .bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: var(--ink-mid);
+            font-size: 15px;
+        }
+
+        .bullet-item i {
+            color: var(--forest);
+            font-size: 14px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--rule);
+            margin: 40px 0;
+        }
+
+        .highlight-box {
+            background: rgba(11, 79, 60, 0.04);
+            border-left: 3px solid var(--forest);
+            border-radius: 8px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            color: var(--ink-mid);
+            font-size: 15px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        .info-card {
+            background: var(--cream);
+            border: 1px solid var(--rule);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .info-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-card p {
+            color: var(--ink-mid);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 16px;
+            padding: 16px;
+            background: var(--warm-white);
+            border: 1px solid var(--rule);
+            border-radius: 10px;
+        }
+
+        .contact-row i {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--forest);
+            color: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .contact-row span {
+            color: var(--ink-mid);
+            font-size: 15px;
+        }
+
+        .contact-row a {
+            color: var(--forest);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-row a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── TABLE ── */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--warm-white);
+            border: 1px solid var(--rule);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .data-table th {
+            background: var(--forest);
+            color: var(--cream);
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 14px 16px;
+            text-align: left;
+        }
+
+        .data-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--rule);
+            color: var(--ink-mid);
+            font-size: 14px;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            border-top: 1px solid var(--rule);
+            padding-top: 28px;
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: var(--ink-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            color: var(--ink-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--forest);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--forest);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            transition: gap 0.2s;
+        }
+
+        .back-link:hover {
+            gap: 12px;
+        }
+
+        .back-link i {
+            font-size: 12px;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 600px) {
+            .two-col-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .site-footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .content-card {
+                padding: 24px;
+            }
+        }
+
+        .arabic-text {
+            font-family: 'Traditional Arabic', serif;
+            font-size: 18px;
+            color: var(--forest);
+            margin: 16px 0 8px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+    <!-- BACK LINK (OPTIONAL) -->
+    <a href="index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back to Application
+    </a>
+
+    <header class="site-header fade-up">
+        <div class="header-eyebrow">Al-Hadi &mdash; Privacy & Trust</div>
+        <h1 class="site-title">Our commitment to your<br><em>privacy & data</em></h1>
+        <p class="header-sub">We believe in transparency and protecting your personal information. This policy explains how we collect, use, and safeguard your data when you use Al-Hadi.</p>
+        <div class="last-updated">
+            <i class="fa-regular fa-calendar" style="margin-right:6px;"></i> Last Updated: March 5, 2026
+        </div>
+    </header>
+
+    <!-- QUICK SUMMARY CARD -->
+    <div class="content-card fade-up">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: var(--forest); display: flex; align-items: center; justify-content: center;">
+                <i class="fa-solid fa-hand-holding-heart" style="color: var(--cream); font-size: 20px;"></i>
+            </div>
+            <div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--ink);">In the name of Allah, the Most Gracious, the Most Merciful</h3>
+            </div>
+        </div>
+        <p class="content-text">Your privacy is of utmost importance to us. We collect only what is necessary to provide you with the best Islamic digital experience, and we never sell your personal information.</p>
+    </div>
+
+    <!-- SECTION 1: INFORMATION WE COLLECT -->
+    <div class="section fade-up">
+        <div class="section-head">
+            <div class="section-icon"><i class="fa-regular fa-clipboard"></i></div>
+            <h2 class="section-title">1. Information We Collect</h2>
+        </div>
+
+        <div class="content-card">
+            <h3 class="section-subtitle">Account Information</h3>
+            <p class="content-text">When you create an account, we collect:</p>
+            <ul class="bullet-list">
+                <li class="bullet-item"><i class="fa-regular fa-user"></i> <strong>Name</strong> – To personalize your experience</li>
+                <li class="bullet-item"><i class="fa-regular fa-envelope"></i> <strong>Email address</strong> – For account verification, updates, and password reset</li>
+                <li class="bullet-item"><i class="fa-regular fa-mobile"></i> <strong>Phone number</strong> – Optional, for mosque notifications and reminders</li>
+                <li class="bullet-item"><i class="fa-solid fa-lock"></i> <strong>Password</strong> – Securely encrypted for account protection</li>
+            </ul>
+
+            <div style="height: 24px;"></div>
+
+            <h3 class="section-subtitle">Location Data</h3>
+            <p class="content-text">With your permission, we collect your location to:</p>
+            <ul class="bullet-list">
+                <li class="bullet-item"><i class="fa-regular fa-compass"></i> Find nearby mosques</li>
+                <li class="bullet-item"><i class="fa-regular fa-clock"></i> Provide accurate prayer times based on your location</li>
+                <li class="bullet-item"><i class="fa-regular fa-calendar"></i> Show local Islamic events</li>
+            </ul>
+            <p class="content-text" style="font-size: 13px; color: var(--ink-muted); margin-top: 8px;">You can disable location access anytime in your device settings.</p>
+
+            <div style="height: 24px;"></div>
+
+            <h3 class="section-subtitle">Usage Data</h3>
+            <p class="content-text">We automatically collect anonymous usage data to improve the app:</p>
+            <ul class="bullet-list">
+                <li class="bullet-item"><i class="fa-regular fa-chart-bar"></i> Features you use most frequently</li>
+                <li class="bullet-item"><i class="fa-regular fa-clock"></i> Time spent in the app</li>
+                <li class="bullet-item"><i class="fa-regular fa-moon"></i> Prayer reminder preferences</li>
+                <li class="bullet-item"><i class="fa-regular fa-bookmark"></i> Favorite mosques and bookmarks</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 2: HOW WE USE YOUR INFORMATION -->
+    <div class="section fade-up">
+        <div class="section-head">
+            <div class="section-icon"><i class="fa-regular fa-compass"></i></div>
+            <h2 class="section-title">2. How We Use Your Information</h2>
+        </div>
+
+        <div class="content-card">
+            <div class="two-col-grid">
+                <div class="info-card">
+                    <h4><i class="fa-regular fa-bell"></i> Notifications</h4>
+                    <p>Send prayer time reminders, mosque announcements, and important updates based on your preferences.</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fa-regular fa-map"></i> Location Services</h4>
+                    <p>Find nearby mosques and provide accurate prayer times for your specific location.</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fa-regular fa-star"></i> Personalization</h4>
+                    <p>Customize your experience with favorite mosques, bookmarks, and content recommendations.</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fa-regular fa-chart-line"></i> Improvement</h4>
+                    <p>Analyze usage patterns to enhance app features and fix issues.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: DATA SHARING -->
+    <div class="section fade-up">
+        <div class="section-head">
+            <div class="section-icon"><i class="fa-regular fa-share-from-square"></i></div>
+            <h2 class="section-title">3. Data Sharing & Disclosure</h2>
+        </div>
+
+        <div class="content-card">
+            <p class="content-text"><strong>We do not sell your personal data.</strong> We may share information only in these specific circumstances:</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Scenario</th>
+                        <th>What We Share</th>
+                        <th>Why</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mosque Notifications</td>
+                        <td>Your notification token</td>
+                        <td>To send prayer reminders and announcements from your favorite mosque</td>
+                    </tr>
+                    <tr>
+                        <td>Service Providers</td>
+                        <td>Anonymous usage data</td>
+                        <td>To analyze app performance and improve features</td>
+                    </tr>
+                    <tr>
+                        <td>Legal Requirements</td>
+                        <td>As required by law</td>
+                        <td>To comply with legal obligations</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <p>📿 "Whoever believes in Allah and the Last Day, let him honor his neighbor." – Our commitment to protecting your privacy is part of honoring the trust you place in us.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 4: DATA RETENTION & SECURITY -->
+    <div class="section fade-up">
+        <div class="section-head">
+            <div class="section-icon"><i class="fa-regular fa-shield"></i></div>
+            <h2 class="section-title">4. Data Retention & Security</h2>
+        </div>
+
+        <div class="content-card">
+            <h3 class="section-subtitle">Retention Period</h3>
+            <ul class="bullet-list">
+                <li class="bullet-item"><i class="fa-regular fa-trash-can"></i> <strong>Account data:</strong> Until you delete your account</li>
+                <li class="bullet-item"><i class="fa-regular fa-clock"></i> <strong>Usage logs:</strong> 12 months for analytics</li>
+                <li class="bullet-item"><i class="fa-regular fa-bell"></i> <strong>Notification preferences:</strong> Until you change or remove them</li>
+            </ul>
+
+            <div style="height: 24px;"></div>
+
+            <h3 class="section-subtitle">Security Measures</h3>
+            <div class="two-col-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="info-card" style="padding: 16px; text-align: center;">
+                    <i class="fa-solid fa-lock" style="color: var(--forest); font-size: 20px; margin-bottom: 8px;"></i>
+                    <p style="font-size: 13px;">Encrypted transmission (HTTPS/SSL)</p>
+                </div>
+                <div class="info-card" style="padding: 16px; text-align: center;">
+                    <i class="fa-solid fa-key" style="color: var(--forest); font-size: 20px; margin-bottom: 8px;"></i>
+                    <p style="font-size: 13px;">Password hashing with bcrypt</p>
+                </div>
+                <div class="info-card" style="padding: 16px; text-align: center;">
+                    <i class="fa-solid fa-shield-halved" style="color: var(--forest); font-size: 20px; margin-bottom: 8px;"></i>
+                    <p style="font-size: 13px;">JWT authentication</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 5: YOUR RIGHTS -->
+    <div class="section fade-up">
+        <div class="section-head">
+            <div class="section-icon"><i class="fa-regular fa-hand"></i></div>
+            <h2 class="section-title">5. Your Rights & Choices</h2>
+        </div>
+
+        <div class="content-card">
+            <p class="content-text">You have the right to:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 20px 0;">
+                <div style="background: var(--cream); padding: 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-regular fa-circle-check" style="color: var(--forest);"></i>
+                    <span style="font-size: 14px;">Access your data</span>
+                </div>
+                <div style="background: var(--cream); padding: 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-regular fa-pen-to-square" style="color: var(--forest);"></i>
+                    <span style="font-size: 14px;">Correct inaccurate data</span>
+                </div>
+                <div style="background: var(--cream); padding: 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-regular fa-trash-can" style="color: var(--forest);"></i>
+                    <span style="font-size: 14px;">Delete your account</span>
+                </div>
+                <div style="background: var(--cream); padding: 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-regular fa-file-export" style="color: var(--forest);"></i>
+                    <span style="font-size: 14px;">Export your data</span>
+                </div>
+                <div style="background: var(--cream); padding: 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-regular fa-bell-slash" style="color: var(--forest);"></i>
+                    <span style="font-size: 14px;">Opt-out of notifications</span>
+                </div>
+            </div>
+            <p class="content-text">To exercise these rights, contact us at <a href="mailto:privacy@al-hadi.app" style="color: var(--forest); text-decoration: none; font-weight: 500;">alhaditeam@gmail.com</a></p>
+        </div>
+    </div>
+
+    <!-- SECTION 6: CHILDREN'S PRIVACY -->
+    <div class="section fade-up">
+        <div class="section-head">
+            <div class="section-icon"><i class="fa-regular fa-child"></i></div>
+            <h2 class="section-title">6. Children's Privacy</h2>
+        </div>
+
+        <div class="content-card">
+            <p class="content-text">Al-Hadi is not intended for children under 13. We do not knowingly collect data from children under 13. If you believe we have, please contact us to delete it immediately.</p>
+        </div>
+    </div>
+
+    <!-- SECTION 7: CHANGES TO THIS POLICY -->
+    <div class="section fade-up">
+        <div class="section-head">
+            <div class="section-icon"><i class="fa-regular fa-pen-to-square"></i></div>
+            <h2 class="section-title">7. Changes to This Policy</h2>
+        </div>
+
+        <div class="content-card">
+            <p class="content-text">We may update this privacy policy periodically. We will notify you of significant changes through the app or via email. Continued use after changes constitutes acceptance.</p>
+            <div style="background: var(--cream); padding: 16px; border-radius: 8px; margin-top: 16px;">
+                <p style="font-size: 14px; color: var(--ink-mid);"><i class="fa-regular fa-clock" style="margin-right: 8px;"></i> This version was updated on March 5, 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="section fade-up">
+        <div class="section-head">
+            <div class="section-icon"><i class="fa-regular fa-message"></i></div>
+            <h2 class="section-title">Contact Us</h2>
+        </div>
+
+        <div class="content-card">
+            <p class="content-text">If you have questions about this privacy policy or your data, please reach out:</p>
+            
+            <div class="contact-row">
+                <i class="fa-regular fa-envelope"></i>
+                <span><strong>Email:</strong> <a href="mailto:alhaditeam@gmail.com">alhaditeam@gmail.com</a></span>
+            </div>
+            
+            <div class="contact-row">
+                <i class="fa-regular fa-globe"></i>
+                <span><strong>Website:</strong> <a href="https://al-hadi.app" target="_blank">al-hadi.app</a></span>
+            </div>
+            
+            <div class="contact-row">
+                <i class="fa-regular fa-building"></i>
+                <span><strong>Address:</strong> Hyderabad, India</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER WITH QURANIC VERSE -->
+    <div style="text-align: center; margin: 48px 0 24px;">
+        <div class="arabic-text">رَبَّنَا لاَ تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا</div>
+        <p style="color: var(--ink-muted); font-size: 13px; font-style: italic;">"Our Lord, do not impose blame upon us if we have forgotten or erred." (2:286)</p>
+    </div>
+
+    <footer class="site-footer">
+        <span class="footer-copy">&copy; 2026 Al-Hadi. All rights reserved.</span>
+        <!-- <nav class="footer-links">
+            <a href="index.html">Careers</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </nav> -->
+    </footer>
+
+</div>
+
+<script>
+    // Simple fade-up animation on scroll (optional)
+    document.addEventListener('DOMContentLoaded', function() {
+        const faders = document.querySelectorAll('.fade-up');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+        
+        faders.forEach(fader => {
+            fader.style.opacity = '0';
+            fader.style.transform = 'translateY(18px)';
+            fader.style.transition = 'opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)';
+            appearOnScroll.observe(fader);
+        });
+    });
+</script>
+
+</body>
+</html>
