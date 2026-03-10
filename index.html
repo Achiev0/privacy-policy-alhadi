@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Al-Hadi | Privacy Policy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -34,8 +34,9 @@
             color: var(--ink);
             font-family: 'DM Sans', sans-serif;
             font-weight: 300;
-            line-height: 1.7;
+            line-height: 1.6;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         /* ── NOISE TEXTURE OVERLAY ── */
@@ -52,48 +53,49 @@
         .page-wrap {
             max-width: 880px;
             margin: 0 auto;
-            padding: 0 24px 80px;
+            padding: 0 16px 60px;
             position: relative;
             z-index: 1;
         }
 
         /* ── HEADER ── */
         .site-header {
-            padding: 60px 0 50px;
+            padding: 40px 0 30px;
             border-bottom: 1px solid var(--rule);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             position: relative;
         }
 
         .header-eyebrow {
-            font-family: 'DM Sans', sans-serif;
             font-size: 10px;
             font-weight: 500;
             letter-spacing: 0.22em;
             text-transform: uppercase;
             color: var(--forest);
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
         .header-eyebrow::before {
             content: '';
             display: inline-block;
-            width: 28px;
+            width: 24px;
             height: 1px;
             background: var(--forest);
         }
 
         h1.site-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(44px, 7vw, 64px);
+            font-size: clamp(32px, 8vw, 64px);
             font-weight: 300;
             line-height: 1.1;
             letter-spacing: -0.01em;
             color: var(--ink);
             margin-bottom: 12px;
+            word-break: break-word;
         }
 
         h1.site-title em {
@@ -102,39 +104,49 @@
         }
 
         .header-sub {
-            font-size: 15px;
+            font-size: clamp(14px, 4vw, 15px);
             color: var(--ink-muted);
-            max-width: 540px;
-            line-height: 1.7;
+            max-width: 100%;
+            line-height: 1.6;
+            word-break: break-word;
         }
 
         .last-updated {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
             font-size: 12px;
             color: var(--ink-muted);
             background: var(--warm-white);
             border: 1px solid var(--rule);
             border-radius: 100px;
             padding: 6px 16px;
-            margin-top: 24px;
+            margin-top: 20px;
+            width: fit-content;
+            max-width: 100%;
+        }
+
+        .last-updated i {
+            margin-right: 6px;
         }
 
         /* ── SECTION TITLES ── */
         .section {
-            margin-bottom: 48px;
+            margin-bottom: 32px;
         }
 
         .section-head {
             display: flex;
             align-items: center;
-            gap: 14px;
-            margin-bottom: 24px;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
         .section-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
             background: var(--forest);
             display: flex;
             align-items: center;
@@ -144,22 +156,25 @@
 
         .section-icon i {
             color: var(--cream);
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .section-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 26px;
+            font-size: clamp(22px, 5vw, 26px);
             font-weight: 500;
             letter-spacing: 0.01em;
             color: var(--ink);
+            word-break: break-word;
+            flex: 1;
         }
 
         .section-subtitle {
-            font-size: 18px;
+            font-size: clamp(16px, 4vw, 18px);
             font-weight: 500;
             color: var(--forest);
-            margin: 24px 0 12px;
+            margin: 20px 0 10px;
+            word-break: break-word;
         }
 
         /* ── CONTENT ── */
@@ -167,8 +182,9 @@
             background: var(--warm-white);
             border: 1px solid var(--rule);
             border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 24px;
+            padding: clamp(20px, 5vw, 32px);
+            margin-bottom: 20px;
+            overflow: hidden;
         }
 
         .content-card:last-child {
@@ -176,10 +192,11 @@
         }
 
         .content-text {
-            font-size: 15px;
+            font-size: clamp(14px, 3.8vw, 15px);
             color: var(--ink-mid);
-            line-height: 1.8;
-            margin-bottom: 20px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            word-break: break-word;
         }
 
         .content-text:last-child {
@@ -193,16 +210,17 @@
 
         .bullet-list {
             list-style: none;
-            margin: 16px 0 20px;
+            margin: 12px 0 16px;
         }
 
         .bullet-item {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 12px;
+            gap: 10px;
+            margin-bottom: 10px;
             color: var(--ink-mid);
-            font-size: 15px;
+            font-size: clamp(14px, 3.8vw, 15px);
+            word-break: break-word;
         }
 
         .bullet-item i {
@@ -210,91 +228,102 @@
             font-size: 14px;
             margin-top: 3px;
             flex-shrink: 0;
+            min-width: 16px;
         }
 
         .divider {
             height: 1px;
             background: var(--rule);
-            margin: 40px 0;
+            margin: 30px 0;
         }
 
         .highlight-box {
             background: rgba(11, 79, 60, 0.04);
             border-left: 3px solid var(--forest);
             border-radius: 8px;
-            padding: 24px;
-            margin: 24px 0;
+            padding: 20px;
+            margin: 20px 0;
+            overflow: hidden;
         }
 
         .highlight-box p {
             color: var(--ink-mid);
-            font-size: 15px;
-            line-height: 1.8;
+            font-size: clamp(14px, 3.8vw, 15px);
+            line-height: 1.7;
             font-style: italic;
+            word-break: break-word;
         }
 
         .two-col-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin: 24px 0;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin: 16px 0;
         }
 
         .info-card {
             background: var(--cream);
             border: 1px solid var(--rule);
             border-radius: 12px;
-            padding: 24px;
+            padding: 20px;
+            height: fit-content;
         }
 
         .info-card h4 {
             font-size: 16px;
             font-weight: 600;
             color: var(--forest);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-wrap: wrap;
         }
 
         .info-card p {
             color: var(--ink-mid);
-            font-size: 14px;
-            line-height: 1.7;
+            font-size: clamp(13px, 3.5vw, 14px);
+            line-height: 1.6;
+            word-break: break-word;
         }
 
         .contact-row {
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-top: 16px;
-            padding: 16px;
+            margin-top: 12px;
+            padding: 14px;
             background: var(--warm-white);
             border: 1px solid var(--rule);
             border-radius: 10px;
+            flex-wrap: wrap;
         }
 
         .contact-row i {
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             border-radius: 8px;
             background: var(--forest);
             color: var(--cream);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 14px;
+            flex-shrink: 0;
         }
 
         .contact-row span {
             color: var(--ink-mid);
-            font-size: 15px;
+            font-size: clamp(13px, 3.8vw, 15px);
+            word-break: break-word;
+            flex: 1;
         }
 
         .contact-row a {
             color: var(--forest);
             text-decoration: none;
             font-weight: 500;
+            word-break: break-all;
         }
 
         .contact-row a:hover {
@@ -305,55 +334,123 @@
         .data-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 24px 0;
+            margin: 20px 0;
             background: var(--warm-white);
             border: 1px solid var(--rule);
             border-radius: 12px;
-            overflow: hidden;
+            overflow-x: auto;
+            display: block;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .data-table table {
+            width: 100%;
+            min-width: 500px;
         }
 
         .data-table th {
             background: var(--forest);
             color: var(--cream);
             font-weight: 500;
-            font-size: 13px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            padding: 14px 16px;
+            padding: 12px 10px;
             text-align: left;
+            white-space: nowrap;
         }
 
         .data-table td {
-            padding: 14px 16px;
+            padding: 12px 10px;
             border-bottom: 1px solid var(--rule);
             color: var(--ink-mid);
-            font-size: 14px;
+            font-size: 13px;
+            word-break: break-word;
         }
 
         .data-table tr:last-child td {
             border-bottom: none;
         }
 
+        /* ── RIGHTS GRID ── */
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .rights-item {
+            background: var(--cream);
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .rights-item i {
+            color: var(--forest);
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .rights-item span {
+            font-size: clamp(13px, 3.5vw, 14px);
+            word-break: break-word;
+        }
+
+        /* ── SECURITY GRID ── */
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin: 16px 0;
+        }
+
+        .security-card {
+            background: var(--cream);
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .security-card i {
+            color: var(--forest);
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .security-card p {
+            font-size: 12px;
+            color: var(--ink-mid);
+            line-height: 1.5;
+        }
+
         /* ── FOOTER ── */
         .site-footer {
             border-top: 1px solid var(--rule);
-            padding-top: 28px;
-            margin-top: 60px;
+            padding-top: 24px;
+            margin-top: 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 16px;
         }
 
         .footer-copy {
             font-size: 12px;
             color: var(--ink-muted);
+            text-align: center;
+            flex: 1;
         }
 
         .footer-links {
             display: flex;
-            gap: 24px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .footer-links a {
@@ -373,10 +470,11 @@
             gap: 8px;
             color: var(--forest);
             text-decoration: none;
-            font-size: 14px;
+            font-size: clamp(13px, 3.8vw, 14px);
             font-weight: 500;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             transition: gap 0.2s;
+            flex-wrap: wrap;
         }
 
         .back-link:hover {
@@ -387,28 +485,106 @@
             font-size: 12px;
         }
 
-        /* ── RESPONSIVE ── */
-        @media (max-width: 600px) {
-            .two-col-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .site-footer {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .content-card {
-                padding: 24px;
-            }
-        }
-
         .arabic-text {
-            font-family: 'Traditional Arabic', serif;
-            font-size: 18px;
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            font-size: clamp(16px, 4vw, 18px);
             color: var(--forest);
             margin: 16px 0 8px;
             text-align: right;
+            word-break: break-word;
+        }
+
+        /* ── UTILITY CLASSES ── */
+        .fade-up {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* ── MOBILE OPTIMIZATIONS ── */
+        @media (max-width: 480px) {
+            .page-wrap {
+                padding: 0 12px 40px;
+            }
+            
+            .site-header {
+                padding: 30px 0 20px;
+            }
+            
+            .section-head {
+                gap: 8px;
+            }
+            
+            .section-icon {
+                width: 32px;
+                height: 32px;
+            }
+            
+            .section-icon i {
+                font-size: 12px;
+            }
+            
+            .content-card {
+                padding: 16px;
+                border-radius: 12px;
+            }
+            
+            .bullet-item {
+                gap: 8px;
+            }
+            
+            .contact-row {
+                padding: 12px;
+            }
+            
+            .two-col-grid {
+                gap: 12px;
+            }
+            
+            .info-card {
+                padding: 16px;
+            }
+            
+            .rights-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+            
+            .security-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+            
+            .last-updated {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* ── TABLET OPTIMIZATIONS ── */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .page-wrap {
+                padding: 0 20px 50px;
+            }
+            
+            .two-col-grid {
+                gap: 14px;
+            }
+        }
+
+        /* ── PRINT STYLES ── */
+        @media print {
+            body::before {
+                display: none;
+            }
+            
+            .back-link,
+            .footer-links {
+                display: none;
+            }
+            
+            .content-card {
+                break-inside: avoid;
+                border: 1px solid #ccc;
+            }
         }
     </style>
 </head>
@@ -416,23 +592,28 @@
 
 <div class="page-wrap">
 
+    <!-- BACK LINK -->
+    <a href="index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back to Application
+    </a>
+
     <header class="site-header fade-up">
         <div class="header-eyebrow">Al-Hadi &mdash; Privacy & Trust</div>
         <h1 class="site-title">Our commitment to your<br><em>privacy & data</em></h1>
         <p class="header-sub">We believe in transparency and protecting your personal information. This policy explains how we collect, use, and safeguard your data when you use Al-Hadi.</p>
         <div class="last-updated">
-            <i class="fa-regular fa-calendar" style="margin-right:6px;"></i> Last Updated: March 5, 2026
+            <i class="fa-regular fa-calendar"></i> Last Updated: March 5, 2026
         </div>
     </header>
 
     <!-- QUICK SUMMARY CARD -->
     <div class="content-card fade-up">
-        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
-            <div style="width: 48px; height: 48px; border-radius: 12px; background: var(--forest); display: flex; align-items: center; justify-content: center;">
-                <i class="fa-solid fa-hand-holding-heart" style="color: var(--cream); font-size: 20px;"></i>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;">
+            <div style="width: 44px; height: 44px; border-radius: 10px; background: var(--forest); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="fa-solid fa-hand-holding-heart" style="color: var(--cream); font-size: 18px;"></i>
             </div>
-            <div>
-                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--ink);">In the name of Allah, the Most Gracious, the Most Merciful</h3>
+            <div style="flex: 1;">
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 4.5vw, 22px); font-weight: 500; color: var(--ink); word-break: break-word;">In the name of Allah, the Most Gracious, the Most Merciful</h3>
             </div>
         </div>
         <p class="content-text">Your privacy is of utmost importance to us. We collect only what is necessary to provide you with the best Islamic digital experience, and we never sell your personal information.</p>
@@ -455,7 +636,7 @@
                 <li class="bullet-item"><i class="fa-solid fa-lock"></i> <strong>Password</strong> – Securely encrypted for account protection</li>
             </ul>
 
-            <div style="height: 24px;"></div>
+            <div style="height: 16px;"></div>
 
             <h3 class="section-subtitle">Location Data</h3>
             <p class="content-text">With your permission, we collect your location to:</p>
@@ -466,7 +647,7 @@
             </ul>
             <p class="content-text" style="font-size: 13px; color: var(--ink-muted); margin-top: 8px;">You can disable location access anytime in your device settings.</p>
 
-            <div style="height: 24px;"></div>
+            <div style="height: 16px;"></div>
 
             <h3 class="section-subtitle">Usage Data</h3>
             <p class="content-text">We automatically collect anonymous usage data to improve the app:</p>
@@ -518,32 +699,34 @@
         <div class="content-card">
             <p class="content-text"><strong>We do not sell your personal data.</strong> We may share information only in these specific circumstances:</p>
             
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Scenario</th>
-                        <th>What We Share</th>
-                        <th>Why</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Mosque Notifications</td>
-                        <td>Your notification token</td>
-                        <td>To send prayer reminders and announcements from your favorite mosque</td>
-                    </tr>
-                    <tr>
-                        <td>Service Providers</td>
-                        <td>Anonymous usage data</td>
-                        <td>To analyze app performance and improve features</td>
-                    </tr>
-                    <tr>
-                        <td>Legal Requirements</td>
-                        <td>As required by law</td>
-                        <td>To comply with legal obligations</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>What We Share</th>
+                            <th>Why</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mosque Notifications</td>
+                            <td>Your notification token</td>
+                            <td>To send prayer reminders and announcements from your favorite mosque</td>
+                        </tr>
+                        <tr>
+                            <td>Service Providers</td>
+                            <td>Anonymous usage data</td>
+                            <td>To analyze app performance and improve features</td>
+                        </tr>
+                        <tr>
+                            <td>Legal Requirements</td>
+                            <td>As required by law</td>
+                            <td>To comply with legal obligations</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div class="highlight-box">
                 <p>📿 "Whoever believes in Allah and the Last Day, let him honor his neighbor." – Our commitment to protecting your privacy is part of honoring the trust you place in us.</p>
@@ -566,21 +749,21 @@
                 <li class="bullet-item"><i class="fa-regular fa-bell"></i> <strong>Notification preferences:</strong> Until you change or remove them</li>
             </ul>
 
-            <div style="height: 24px;"></div>
+            <div style="height: 16px;"></div>
 
             <h3 class="section-subtitle">Security Measures</h3>
-            <div class="two-col-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <div class="info-card" style="padding: 16px; text-align: center;">
-                    <i class="fa-solid fa-lock" style="color: var(--forest); font-size: 20px; margin-bottom: 8px;"></i>
-                    <p style="font-size: 13px;">Encrypted transmission (HTTPS/SSL)</p>
+            <div class="security-grid">
+                <div class="security-card">
+                    <i class="fa-solid fa-lock"></i>
+                    <p>Encrypted transmission (HTTPS/SSL)</p>
                 </div>
-                <div class="info-card" style="padding: 16px; text-align: center;">
-                    <i class="fa-solid fa-key" style="color: var(--forest); font-size: 20px; margin-bottom: 8px;"></i>
-                    <p style="font-size: 13px;">Password hashing with bcrypt</p>
+                <div class="security-card">
+                    <i class="fa-solid fa-key"></i>
+                    <p>Password hashing with bcrypt</p>
                 </div>
-                <div class="info-card" style="padding: 16px; text-align: center;">
-                    <i class="fa-solid fa-shield-halved" style="color: var(--forest); font-size: 20px; margin-bottom: 8px;"></i>
-                    <p style="font-size: 13px;">JWT authentication</p>
+                <div class="security-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <p>JWT authentication</p>
                 </div>
             </div>
         </div>
@@ -595,29 +778,29 @@
 
         <div class="content-card">
             <p class="content-text">You have the right to:</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 20px 0;">
-                <div style="background: var(--cream); padding: 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
-                    <i class="fa-regular fa-circle-check" style="color: var(--forest);"></i>
-                    <span style="font-size: 14px;">Access your data</span>
+            <div class="rights-grid">
+                <div class="rights-item">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Access your data</span>
                 </div>
-                <div style="background: var(--cream); padding: 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
-                    <i class="fa-regular fa-pen-to-square" style="color: var(--forest);"></i>
-                    <span style="font-size: 14px;">Correct inaccurate data</span>
+                <div class="rights-item">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <span>Correct inaccurate data</span>
                 </div>
-                <div style="background: var(--cream); padding: 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
-                    <i class="fa-regular fa-trash-can" style="color: var(--forest);"></i>
-                    <span style="font-size: 14px;">Delete your account</span>
+                <div class="rights-item">
+                    <i class="fa-regular fa-trash-can"></i>
+                    <span>Delete your account</span>
                 </div>
-                <div style="background: var(--cream); padding: 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
-                    <i class="fa-regular fa-file-export" style="color: var(--forest);"></i>
-                    <span style="font-size: 14px;">Export your data</span>
+                <div class="rights-item">
+                    <i class="fa-regular fa-file-export"></i>
+                    <span>Export your data</span>
                 </div>
-                <div style="background: var(--cream); padding: 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">
-                    <i class="fa-regular fa-bell-slash" style="color: var(--forest);"></i>
-                    <span style="font-size: 14px;">Opt-out of notifications</span>
+                <div class="rights-item">
+                    <i class="fa-regular fa-bell-slash"></i>
+                    <span>Opt-out of notifications</span>
                 </div>
             </div>
-            <p class="content-text">To exercise these rights, contact us at <a href="mailto:privacy@al-hadi.app" style="color: var(--forest); text-decoration: none; font-weight: 500;">alhaditeam@gmail.com</a></p>
+            <p class="content-text">To exercise these rights, contact us at <a href="mailto:alhaditeam@gmail.com" style="color: var(--forest); text-decoration: none; font-weight: 500;">alhaditeam@gmail.com</a></p>
         </div>
     </div>
 
@@ -643,7 +826,9 @@
         <div class="content-card">
             <p class="content-text">We may update this privacy policy periodically. We will notify you of significant changes through the app or via email. Continued use after changes constitutes acceptance.</p>
             <div style="background: var(--cream); padding: 16px; border-radius: 8px; margin-top: 16px;">
-                <p style="font-size: 14px; color: var(--ink-mid);"><i class="fa-regular fa-clock" style="margin-right: 8px;"></i> This version was updated on March 5, 2026</p>
+                <p style="font-size: 14px; color: var(--ink-mid); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <i class="fa-regular fa-clock"></i> This version was updated on March 5, 2026
+                </p>
             </div>
         </div>
     </div>
@@ -671,18 +856,13 @@
     </div>
 
     <!-- FOOTER WITH QURANIC VERSE -->
-    <div style="text-align: center; margin: 48px 0 24px;">
+    <div style="text-align: center; margin: 40px 0 20px;">
         <div class="arabic-text">رَبَّنَا لاَ تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا</div>
-        <p style="color: var(--ink-muted); font-size: 13px; font-style: italic;">"Our Lord, do not impose blame upon us if we have forgotten or erred." (2:286)</p>
+        <p style="color: var(--ink-muted); font-size: clamp(12px, 3.5vw, 13px); font-style: italic;">"Our Lord, do not impose blame upon us if we have forgotten or erred." (2:286)</p>
     </div>
 
     <footer class="site-footer">
         <span class="footer-copy">&copy; 2026 Al-Hadi. All rights reserved.</span>
-        <!-- <nav class="footer-links">
-            <a href="index.html">Careers</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact</a>
-        </nav> -->
     </footer>
 
 </div>
@@ -708,12 +888,10 @@
         faders.forEach(fader => {
             fader.style.opacity = '0';
             fader.style.transform = 'translateY(18px)';
-            fader.style.transition = 'opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)';
             appearOnScroll.observe(fader);
         });
     });
 </script>
 
 </body>
-
 </html>
